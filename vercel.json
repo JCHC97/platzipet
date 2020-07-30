@@ -1,0 +1,29 @@
+{
+	"version": 2,
+	"name": "petgram",
+	"name": "petgram.com.ve",
+	"builds": [
+		{
+			"src": "package.json",
+			"use": "@vercel/static"
+		}
+	],
+	"routes": [
+		{
+			"src": "(.*).js",
+			"dest": "/$1.js"
+		},
+		{
+			"src": "(.*).json",
+			"dest": "/$1.json"
+		},
+		{
+			"src": "(.*).png",
+			"dest": "/$1.png"
+		},
+		{
+			"src": "/.*", 
+			"dest": "/index.html"
+		}
+	]
+}
